@@ -1,0 +1,36 @@
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'type-enum': [
+      2,
+      'always',
+      [
+        'Feat',
+        'Fix',
+        'Refactor',
+        'Design',
+        'Comment',
+        'Style',
+        'Docs',
+        'Test',
+        'Chore',
+        'Init',
+        'Rename',
+        'Remove',
+      ],
+    ],
+    'subject-case': [2, 'always', 'sentence-case'],
+    'subject-full-stop': [2, 'never', '.'],
+    'header-max-length': [2, 'always', 50],
+    'header-min-length': [2, 'always', 1],
+    'body-leading-blank': [2, 'always'],
+    'footer-leading-blank': [2, 'always'],
+    'type-case': [2, 'always', 'pascal-case'],
+    'scope-case': [2, 'always', 'lower-case'],
+    'subject-empty': [2, 'never'],
+    'type-empty': [2, 'never'],
+    'body-empty': [0, 'never'],
+    'footer-empty': [0, 'never'],
+  },
+};
